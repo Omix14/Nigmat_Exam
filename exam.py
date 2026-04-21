@@ -150,7 +150,22 @@ def is_palindrome(s):
 
 #Task 11
 
+import time
+def timer(func):
+    def wrapper(*args, **kwargs):
+        s = time.time()
+        result = func(*args, **kwargs)
+        z = time.time()
+        print(z-s)
+        return result
+    return wrapper
 
+@timer
+def slow_function():
+    time.sleep(1)
+    return "done"
+
+print(slow_function())
 
 #Task 12
 
