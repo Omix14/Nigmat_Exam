@@ -140,7 +140,13 @@ print(nested_sum([1,2,3,4,5]))
 
 #Task 10
 
-# ?
+def is_palindrome(s):
+    s = s.lower().replace(' ','')
+    if len(s)<=1:
+        return True
+    if s[0] == s[-1]:
+        return is_palindrome(s[1:-1])
+    else: return False
 
 #Task 11
 
