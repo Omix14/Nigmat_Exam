@@ -34,20 +34,20 @@ n2 =int(input("second number "))
 operation = input (" what is the operation? write a character ")
 
 if operation == '*':
-    sum = n1*n2
-    print(sum)
+    sum1 = n1*n2
+    print(sum1)
 elif operation == '/':
     if n2 == 0:
         print("not allowd!")
     else:
-        sum = n1/n2
-        print(sum)
+        sum1 = n1/n2
+        print(sum1)
 elif operation == '+':
-    sum = n1+n2
-    print(sum)
+    sum1 = n1+n2
+    print(sum1)
 elif operation == '-':
-    sum = n1-n2
-    print(sum)
+    sum1 = n1-n2
+    print(sum1)
 else: print(" try another operation ")
 
 
@@ -188,6 +188,29 @@ def hello():
 
 
 #Task 14
+class Student:
+    def __init__(self, name):
+        self.name = name
+        self.grades = []
+    
+    def add_grade(self, new):
+        self.grades.append(new)
+    
+    def average(self):
+        result = round((sum(self.grades)/len(self.grades)), 2)
+        return result
+    
+
+s = Student("Аня")
+s.add_grade(5)
+s.add_grade(4)
+s.add_grade(5)
+
+print(s.average())
+
+
+
+    
 
 
 
